@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# 0. Double the number of webservers
+sudo apt-get update
+sudo apt-get install -y nginx
+# Adding the header:wq
+sudo sed -i "/server_name _/a\	add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+
+# test error on the server
+sudo nginx -t
+
+#reatarting server
+sudo service nginx restart
