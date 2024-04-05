@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# client configuration file
+Host 54.84.46.163
+	HostName ubuntu
+	User ubuntu
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
+	PubkeyAuthentication yes
